@@ -1,0 +1,155 @@
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Polinizadores</title>
+    <link rel="shortcut icon" href="imagenes/magrama-favicon.ico" />
+
+    <script src="jquery/jquery-3.7.0.min.js"></script>
+
+    <script src="https://js.arcgis.com/calcite-components/1.11.0/calcite.esm.js" type="module"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/1.11.0/calcite.css" />
+
+    <script>
+        const options = {
+            dojoConfig: {
+                async: true,
+                packages: [
+                    {
+                        location: './chart/chart.umd.js',
+                        name: 'Chart'
+                    },
+                ]
+            }
+        };
+    </script>
+
+    <script src="https://js.arcgis.com/4.28/"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css" />
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body class="custom-body">
+    <calcite-loader active></calcite-loader>
+    <calcite-shell content-behind>
+
+        <h2 id="header-title" slot="header">
+            <img src="./imagenes/miteco.png" style="height: 50px" alt="MITECO">
+            <p>Polinizadores</p>
+        </h2>
+
+        <calcite-shell-panel slot="panel-start" position="start" display-mode="float">
+
+            <calcite-action-bar slot="action-bar">
+                <calcite-action data-action-id="layers" icon="layers" text="Capas de información"></calcite-action>
+                <calcite-action data-action-id="basemaps" icon="basemap" text="Mapas base"></calcite-action>
+                <calcite-action data-action-id="legend" icon="legend" text="Leyenda"></calcite-action>
+                <calcite-action data-action-id="filter" icon="filter" text="Filtrar los datos"></calcite-action>
+                <!-- <calcite-action data-action-id="search" icon="search" text="Buscar parcela"></calcite-action> -->
+                <calcite-action data-action-id="chart" icon="graph-pie-slice"
+                    text="Gráfico e Indicadores"></calcite-action>
+                <!-- <calcite-action data-action-id="print" icon="print" text="Imprimir"></calcite-action> -->
+                <calcite-action data-action-id="information" icon="information" text="Información"></calcite-action>
+            </calcite-action-bar>
+
+            <!-- Map-specific panels (each one provides a div for ArcGIS Maps SDK for JavaScript widgets) -->
+            <calcite-panel class="custom-header" heading="Capas de información" height-scale="l" data-panel-id="layers"
+                hidden>
+                <div id="layers-container"></div>
+            </calcite-panel>
+            <calcite-panel class="custom-header" heading="Mapas Base" height-scale="l" data-panel-id="basemaps" hidden>
+                <div id="basemaps-container"></div>
+            </calcite-panel>
+            <calcite-panel class="custom-header" heading="Leyenda" height-scale="l" data-panel-id="legend" hidden>
+                <div id="legend-container"></div>
+            </calcite-panel>
+            <calcite-panel class="custom-header" heading="Filtrar los datos" height-scale="l" data-panel-id="filter"
+                hidden>
+                <div id="filter-container">
+                    <div id="ccaas" class="ccaas selector">
+                        <label for="ccaa">Selecciona una Comunidad Autónoma:</label>
+                        <select name="ccaa" id="ccaa">
+                            <option value="todas">Todas las CC.AA.</option>
+                        </select>
+                    </div>
+                    <div id="provincias" class="provincias selector">
+                        <label for="provincia">Selecciona una Provincia:</label>
+                        <select name="provincia" id="provincia">
+                            <option value="todas">Todas las Provincias</option>
+                        </select>
+                    </div>
+                    <div id="ambientes" class="ambientes selector">
+                        <label for="ambientetxt">Selecciona un Ambiente:</label>
+                        <select name="ambientetxt" id="ambientetxt">
+                            <option value="todas">Todos los Ambientes</option>
+                        </select>
+                    </div>
+                    <div id="usuarios" class="usuarios selector">
+                        <label for="usuario">Selecciona un Usuario:</label>
+                        <select name="usuario" id="usuario">
+                            <option value="todas">Todos los Usuarios</option>
+                        </select>
+                    </div>
+                    <div id="rangovisita" class="rangovisita selector">
+                        <label for="rangovisitas">Selecciona un rango de visitas:</label>
+                        <select name="rangovisitas" id="rangovisitas">
+                            <option value="todas">Todas las Visitas</option>
+                        </select>
+                    </div>
+                    <div class="boton" id="boton">
+                        <button id="button" type="button" disabled>Restablecer</button>
+                    </div>
+                </div>
+            </calcite-panel>
+            <calcite-panel class="custom-header" heading="Gráfico e Indicadores" height-scale="l" data-panel-id="chart"
+                hidden>
+                <div id="indicadores-container">
+                    <div id="indicadores">
+                        <div id="indicador-uno" class="indicador">
+                        </div>
+                        <div id="indicador-dos" class="indicador"></div>
+                    </div>
+                    <div id="grafico" style="width: 225px; height: 225px">
+                        <canvas id="pie" style="width: 225px; height: 225px"></canvas>
+                        <div id="leyenda">
+                            <table id="tabla-leyenda">
+                                <tbody>
+                                    <tr>
+                                        <td><img src="./imagenes/mariposas.PNG" alt=""></td>
+                                        <td>Mariposas</td>
+                                        <td id="valor-mariposas"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="./imagenes/sirfidos.PNG" alt=""></td>
+                                        <td>Sírfidos</td>
+                                        <td id="valor-sirfidos"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="./imagenes/abejas.PNG" alt=""></td>
+                                        <td>Abejas</td>
+                                        <td id="valor-abejas"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </calcite-panel>
+            <calcite-panel class="custom-header" heading="Información" data-panel-id="information" hidden>
+                <div id="info-content">
+                    <p>Versión en desarrollo del visor para seguir el avance en la toma de datos en campo con la
+                        aplicación de poliniza10_2
+                        (Polinizadores).</p>
+                </div>
+            </calcite-panel>
+
+        </calcite-shell-panel>
+
+        <div id="viewDiv"></div>
+
+    </calcite-shell>
+</body>
+
+</html>

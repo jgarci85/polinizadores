@@ -1,0 +1,250 @@
+html,
+body,
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.custom-body {
+    --calcite-ui-brand: #5a5c5c;
+    --calcite-ui-brand-hover: #00ad82;
+    --calcite-ui-brand-press: #00916d;
+    --calcite-ui-background: #f2f7f4;
+    --calcite-ui-foreground-1: #fafffd;
+    --calcite-ui-foreground-2: #edf7f3;
+    --calcite-ui-foreground-3: #e4ebe8;
+    --calcite-ui-foreground-current: #c7ffda;
+    --calcite-ui-info: #007f99;
+    --calcite-ui-success: #47ac35;
+    --calcite-ui-warning: #eeb417;
+    --calcite-ui-danger: #d92024;
+    --calcite-ui-danger-hover: #a91e20;
+    --calcite-ui-danger-press: #7c1315;
+    --calcite-ui-text-1: #222927;
+    --calcite-ui-text-2: #333d3a;
+    --calcite-ui-text-3: #3a4541;
+    --calcite-ui-text-inverse: #fafffd;
+    --calcite-ui-text-link: #04716c;
+    --calcite-ui-border-1: #c3c7c5;
+    --calcite-ui-border-2: #cdd4d0;
+    --calcite-ui-border-3: #dfe8e3;
+    --calcite-ui-border-input: #727d77;
+}
+
+.custom-header {
+    --calcite-ui-foreground-1: #D0D3D4;
+    --calcite-ui-text-2: #222927;
+}
+
+#header-title {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--calcite-ui-brand);
+    color: var(--calcite-ui-background);
+    margin: 0px;
+    padding: 2px;
+}
+
+#header-title img {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 15px;
+}
+
+#header-title p {
+    margin: 0px;
+    padding: 0px;
+    margin-left: 15px;
+    line-height: 50px;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+}
+
+.esri-search {
+    margin-right: 50px;
+    margin-top: -115px;
+}
+
+#search-container {
+    padding: 15px;
+}
+
+#search-form input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#search-form input::placeholder {
+    height: 20px;
+}
+
+#filter-container {
+    min-height: 300px;
+    padding: 15px;
+}
+
+#indicadores-container {
+    min-height: 450px;
+    padding: 15px;
+}
+
+.selector {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#ccaa,
+#provincia,
+#ambientetxt,
+#usuario,
+#rangovisitas {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+select {
+    background-color: var(--calcite-ui-background);
+}
+
+#ccaa option,
+#provincia option,
+#ambientetxt option,
+#usuario option,
+#rangovisitas option {
+    width: 100%;
+    height: 30px;
+    background-color: var(--calcite-ui-background);
+}
+
+#info-content {
+    padding: 15px;
+    font-style: italic;
+}
+
+#indicadores-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.indicador {
+    background-color: #E8E8E8;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+.indicador p {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.indicador .titulo {
+    font-size: 14px;
+    /* font-weight: bold; */
+    color: var(--calcite-ui-text-1);
+}
+
+.indicador .valor {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--calcite-ui-text-1);
+}
+
+#grafico {
+    font-size: 13px;
+    padding: 0;
+    margin: 0 auto 10 auto;
+    color: var(--calcite-ui-text-1);
+}
+
+#leyenda {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+
+}
+
+#tabla-leyenda {
+    width: 100%;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #5a5c5c;
+    text-align: start;
+    color: var(--calcite-ui-text-1);
+}
+
+.esri-scale-bar.esri-widget {
+    margin-left: 50px;
+}
+
+.esri-coordinate-conversion__select-row {
+    display: none;
+}
+
+.esri-coordinate-conversion {
+    width: auto;
+    min-width: 150px;
+}
+
+.boton {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton :disabled {
+    opacity: 0.6;
+}
+
+button {
+    width: 100%;
+    background-color: var(--calcite-ui-foreground-1);
+    border: 1px solid var(--calcite-ui-foreground-1);
+    color: var(--calcite-ui-text-2);
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover:enabled {
+    background-color: var(--calcite-ui-text-2);
+    border: 1px solid var(--calcite-ui-text-2);
+    color: var(--calcite-ui-foreground-1);
+
+}
+
+@media only screen and (max-width: 600px) {
+    #header-title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    #header-title img {
+        margin: 0px;
+        padding: 0px;
+        margin-left: 10px;
+        height: 30px;
+    }
+
+    #header-title p {
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+        margin-left: 10px;
+        line-height: 50px;
+        font-size: 18px;
+        letter-spacing: 0.05em;
+    }
+}
