@@ -116,7 +116,7 @@ require([
 
     const parcelas = new FeatureLayer({
         title: "Parcelas de muestreo",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/3",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/9",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -243,7 +243,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 4,
+                    relationshipId: 3,
                     title: "Trampa plato",
                     displayCount: 0,
                     orderByFields: [{
@@ -253,7 +253,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 3,
+                    relationshipId: 1,
                     title: "Trampa luz",
                     displayCount: 0,
                     orderByFields: [{
@@ -268,7 +268,7 @@ require([
 
     const subtransecto = new FeatureLayer({
         title: "Subtransecto",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/2",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/8",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -348,7 +348,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 2,
+                    relationshipId: 4,
                     title: "Número visita Subtransecto",
                     displayCount: 0,
                     orderByFields: [{
@@ -363,7 +363,7 @@ require([
 
     const tabla_visita_subtransecto = new FeatureLayer({
         title: "Número visita subtransecto",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/4",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/15",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -408,7 +408,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 2,
+                    relationshipId: 4,
                     title: "Subtransecto",
                     displayCount: 1,
                     orderByFields: [{
@@ -418,7 +418,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 16,
+                    relationshipId: 13,
                     title: "Medición Sirfidos",
                     displayCount: 0,
                     orderByFields: [{
@@ -428,7 +428,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 17,
+                    relationshipId: 9,
                     title: "Medición Abejas",
                     displayCount: 0,
                     orderByFields: [{
@@ -438,7 +438,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 15,
+                    relationshipId: 11,
                     title: "Medición Mariposas",
                     displayCount: 0,
                     orderByFields: [{
@@ -453,7 +453,7 @@ require([
 
     const tabla_medicion_mariposas = new FeatureLayer({
         title: "Medición mariposas",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/9",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/13",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -523,7 +523,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 15,
+                    relationshipId: 11,
                     title: "Número visita subtransecto",
                     displayCount: 1,
                     orderByFields: [{
@@ -533,7 +533,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 9,
+                    relationshipId: 10,
                     title: "Especies mariposas",
                     displayCount: 0,
                     orderByFields: [{
@@ -548,7 +548,7 @@ require([
 
     const tabla_especies_mariposas = new FeatureLayer({
         title: "Observación taxones mariposas",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/8",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/26",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -583,7 +583,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 9,
+                    relationshipId: 10,
                     title: "Medición mariposas",
                     displayCount: 1,
                     orderByFields: [{
@@ -598,7 +598,7 @@ require([
 
     const tabla_medicion_sirfidos = new FeatureLayer({
         title: "Medición sirfidos",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/11",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/14",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -668,7 +668,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 16,
+                    relationshipId: 13,
                     title: "Número visita subtransecto",
                     displayCount: 1,
                     orderByFields: [{
@@ -678,7 +678,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 10,
+                    relationshipId: 12,
                     title: "Especies sirfidos",
                     displayCount: 0,
                     orderByFields: [{
@@ -693,7 +693,7 @@ require([
 
     const tabla_especies_sirfidos = new FeatureLayer({
         title: "Observación taxones sírfidos",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/19",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/27",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -738,7 +738,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 10,
+                    relationshipId: 12,
                     title: "Medición sirfidos",
                     displayCount: 1,
                     orderByFields: [{
@@ -753,7 +753,7 @@ require([
 
     const tabla_medicion_abejas = new FeatureLayer({
         title: "Medición abejas",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/6",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/12",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -823,7 +823,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 17,
+                    relationshipId: 9,
                     title: "Número visita subtransecto",
                     displayCount: 1,
                     orderByFields: [{
@@ -833,7 +833,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 7,
+                    relationshipId: 8,
                     title: "Especies abejas",
                     displayCount: 0,
                     orderByFields: [{
@@ -848,7 +848,7 @@ require([
 
     const tabla_especies_abejas = new FeatureLayer({
         title: "Observación taxones abejas",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/15",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/23",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -893,7 +893,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 7,
+                    relationshipId: 8,
                     title: "Medición abejas",
                     displayCount: 1,
                     orderByFields: [{
@@ -908,7 +908,7 @@ require([
 
     const trampaplato = new FeatureLayer({
         title: "Trampa Plato",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/1",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/7",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -978,7 +978,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 4,
+                    relationshipId: 3,
                     title: "Parcela de muestreo",
                     displayCount: 1,
                     orderByFields: [{
@@ -988,7 +988,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 1,
+                    relationshipId: 2,
                     title: "Número visita Trampa Plato",
                     displayCount: 0,
                     orderByFields: [{
@@ -1003,7 +1003,7 @@ require([
 
     const tabla_visita_trampa_plato = new FeatureLayer({
         title: "Número visita Trampa Plato",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/10",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/19",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -1113,7 +1113,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 1,
+                    relationshipId: 2,
                     title: "Trampa plato",
                     displayCount: 1,
                     orderByFields: [{
@@ -1123,7 +1123,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 12,
+                    relationshipId: 22,
                     title: "Observación Flora Trampa plato",
                     displayCount: 0,
                     orderByFields: [{
@@ -1133,7 +1133,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 18,
+                    relationshipId: 21,
                     title: "Técnico gabinete",
                     displayCount: 0,
                     orderByFields: [{
@@ -1148,7 +1148,7 @@ require([
 
     const tabla_trampa_plato_flora = new FeatureLayer({
         title: "Observación Flora Trampas Plato",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/14",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/22",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -1178,7 +1178,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 12,
+                    relationshipId: 22,
                     title: "Número visita trampa plato",
                     displayCount: 1,
                     orderByFields: [{
@@ -1193,7 +1193,7 @@ require([
 
     const tabla_trampa_plato_tecnico = new FeatureLayer({
         title: "Identificación técnico de gabinete",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/20",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/29",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -1213,7 +1213,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 18,
+                    relationshipId: 21,
                     title: "Número visita trampa plato",
                     displayCount: 1,
                     orderByFields: [{
@@ -1223,7 +1223,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 8,
+                    relationshipId: 7,
                     title: "Identificación trampa plato gabinete",
                     displayCount: 0,
                     orderByFields: [{
@@ -1238,7 +1238,7 @@ require([
 
     const tabla_trampa_plato_identificacion_tecnico = new FeatureLayer({
         title: "Identificación trampa plato en gabinete",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/7",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/11",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -1298,7 +1298,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 8,
+                    relationshipId: 7,
                     title: "Técnico gabinete",
                     displayCount: 1,
                     orderByFields: [{
@@ -1313,7 +1313,7 @@ require([
 
     const trampaluz = new FeatureLayer({
         title: "Trampa Luz",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/0",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/6",
         minScale: 50000000,
         maxScale: 0,
         outFields: ["*"],
@@ -1385,7 +1385,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 3,
+                    relationshipId: 1,
                     title: "Parcela de muestreo",
                     displayCount: 1,
                     orderByFields: [{
@@ -1410,7 +1410,7 @@ require([
 
     const tabla_visita_trampa_luz = new FeatureLayer({
         title: "Número visita Trampa Luz",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/12",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/17",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -1540,7 +1540,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 13,
+                    relationshipId: 17,
                     title: "Observación tramo luz fuera",
                     displayCount: 0,
                     orderByFields: [{
@@ -1550,7 +1550,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 14,
+                    relationshipId: 16,
                     title: "Observación tramo luz dentro",
                     displayCount: 0,
                     orderByFields: [{
@@ -1560,7 +1560,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 11,
+                    relationshipId: 18,
                     title: "Trampa Luz Flora",
                     displayCount: 0,
                     orderByFields: [{
@@ -1575,7 +1575,7 @@ require([
 
     const tabla_trampa_luz_flora = new FeatureLayer({
         title: "Observación Flora Trampa Luz",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/13",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/21",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -1605,7 +1605,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 11,
+                    relationshipId: 18,
                     title: "Número visita Trampa luz",
                     displayCount: 1,
                     orderByFields: [{
@@ -1620,7 +1620,7 @@ require([
 
     const tabla_observacion_trampa_luz_dentro = new FeatureLayer({
         title: "Observación taxones interior trampa",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/17",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/25",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -1655,7 +1655,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 14,
+                    relationshipId: 16,
                     title: "Número visita Trampa luz",
                     displayCount: 1,
                     orderByFields: [{
@@ -1670,7 +1670,7 @@ require([
 
     const tabla_observacion_trampa_luz_fuera = new FeatureLayer({
         title: "Observación taxones exterior trampa",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/16",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/24",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -1705,7 +1705,7 @@ require([
                 },
                 {
                     type: "relationship",
-                    relationshipId: 13,
+                    relationshipId: 17,
                     title: "Número visita Trampa luz",
                     displayCount: 1,
                     orderByFields: [{
@@ -1720,7 +1720,7 @@ require([
 
     const tabla_trampa_luz_tecnico = new FeatureLayer({
         title: "Identificación técnico de gabinete",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/18",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/28",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -1765,7 +1765,7 @@ require([
 
     const tabla_trampa_luz_identificacion_tecnico = new FeatureLayer({
         title: "Identificación trampa luz en gabinete",
-        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/poliniza10_2_231030/FeatureServer/5",
+        url: "https://services1.arcgis.com/NEtTcrdz0tnwKxRQ/arcgis/rest/services/polinizadores/FeatureServer/10",
         outFields: ["*"],
         definitionExpression: "1=1",
         popupTemplate: {
@@ -2397,7 +2397,7 @@ require([
 
         lista.push("ccaa = '" + autonomia + "'")
         lista.push("provincia = '" + provincia + "'")
-        lista.push("ambiente = '" + ambientetxt + "'")
+        lista.push("ambientetxt = '" + ambientetxt + "'")
         lista.push("usuario = '" + usuario + "'")
         lista.push("rangovisitas = '" + rangovisitas + "'")
 
