@@ -2462,7 +2462,6 @@ require([
         const abejas = feature_abejas.length;
 
         const total = mariposas + sirfidos + abejas;
-        // console.log(total);
         const div = document.getElementById('indicador-uno');
         while (div.firstChild) {
             div.removeChild(div.firstChild);
